@@ -113,11 +113,14 @@ class Game extends React.Component {
       );
     });
 
-    let status;
+    let status
+    let classe
     if (vencedor) {
       status = `Jogador ${vencedor} venceu!`
+      classe = 'vencedor'
     } else {
       status = `Próximo jogador: ${this.state.proximo ? 'X' : '0'}`
+      classe = 'status-game'
     }
 
     return (
@@ -130,7 +133,7 @@ class Game extends React.Component {
 
         </div>
         <div className="game-info">
-          <div className="status-game">{status}</div>
+          <div className={classe} >{status}</div>
           <ol>{jogadas}</ol>
         </div>
       </div>

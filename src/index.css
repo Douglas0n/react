@@ -78,6 +78,15 @@ ol, ul {
   background-color: #fff;
   box-shadow: 0px 0px 10px #999;
 }
+
+.vencedor{
+  border: 1px solid #999;
+  color: black;
+  padding: 3px;
+  background-color: plum;
+  box-shadow: 0px 0px 10px #999;
+}
+
 .game-info {
   box-shadow: 0px 2px 10px #999;
   text-align: center;
