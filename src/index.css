@@ -1,6 +1,6 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 50px
 }
 
 ol, ul {
@@ -8,6 +8,7 @@ ol, ul {
 }
 
 .board-row:after {
+  margin: auto;
   clear: both;
   content: "";
   display: table;
@@ -32,6 +33,10 @@ ol, ul {
   width: 34px;
 }
 
+.square:hover{
+  background-color: plum;
+}
+
 .square:focus {
   outline: none;
 }
@@ -40,11 +45,50 @@ ol, ul {
   background: #ddd;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+.botao {
+  text-shadow: 0px 2px 2px #999;
+  text-align: center;
+  background-color: #fff;
+
+  width: 80%;
+  padding: 2px;
+  color: black;
+  display:block;
+  border: 1px solid #999;
 }
 
+.botao:hover {
+  background-color: plum;
+}
+
+.game {
+  padding: 10px;
+  width: 310px;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: plum;
+  box-shadow:-1px 4px 20px #999;
+}
+.status-game{
+  border: 1px solid #999;
+  color: black;
+  padding: 3px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #999;
+}
 .game-info {
-  margin-left: 20px;
+  box-shadow: 0px 2px 10px #999;
+  text-align: center;
+  padding: 5px;
+  margin: 2px auto;
+  background-color: #fff;
+}
+.game-info ol {
+  width: 130px;
+  position: relative;
+  margin: 20px auto;
+  list-style-type: none;
+  text-align: center;
 }

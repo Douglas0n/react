@@ -102,11 +102,11 @@ class Game extends React.Component {
 
     const jogadas = historico.map((jogadas, movimento) => {
       const descricao = movimento ? 
-      `Ir para movimento #${movimento+1}` :
-      `Ir para o inicio do jogo`
+      `Movimento ${movimento+1}` :
+      `Ínicio do jogo`
       return (
         <li key={movimento}>
-          <button onClick={() => this.irPara(movimento)}>
+          <button className="botao" onClick={() => this.irPara(movimento)}>
           {descricao}
           </button>
         </li>
@@ -115,7 +115,7 @@ class Game extends React.Component {
 
     let status;
     if (vencedor) {
-      status = `Vencedor: ${vencedor}!!`
+      status = `Jogador ${vencedor} venceu!`
     } else {
       status = `Próximo jogador: ${this.state.proximo ? 'X' : '0'}`
     }
@@ -130,7 +130,7 @@ class Game extends React.Component {
 
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div className="status-game">{status}</div>
           <ol>{jogadas}</ol>
         </div>
       </div>
